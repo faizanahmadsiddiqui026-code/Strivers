@@ -19,14 +19,14 @@ export default function Landing() {
         <div className="flex flex-col gap-4 w-64 mx-auto">
           
           <button
-            onClick={() => navigate("/customer")}
+            onClick={() => navigate("/customer/login")}
             className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-3 rounded-xl shadow-md"
           >
             Customer
           </button>
 
           <button
-            onClick={() => navigate("/vendor")}
+            onClick={() => navigate("/vendor/login")}
             className="bg-gray-800 hover:bg-black transition text-white font-semibold py-3 rounded-xl shadow-md"
           >
             Vendor
