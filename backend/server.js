@@ -238,5 +238,8 @@ app.get('/user/me', authMiddleware, (req, res) => {
   res.json({ id: req.user.id, email: req.user.email });
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'OK' });
+});
 
 module.exports = app;
