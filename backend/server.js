@@ -238,4 +238,5 @@ app.get('/user/me', authMiddleware, (req, res) => {
   res.json({ id: req.user.id, email: req.user.email });
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+module.exports = app;
