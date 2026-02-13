@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors({
-  origin: 'https://strivers-three.vercel.app/',
+  origin: 'https://strivers-pmvi.vercel.app//',
   credentials: true
 }));
 
