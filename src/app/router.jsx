@@ -2,9 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Landing from "../pages/Landing";
 import CustomerHome from "../pages/customer/CustomerHome";
 import VendorHome from "../pages/vendor/VendorHome";
-import Login from "../pages/auth/Login";
-import Signup from "../pages/auth/Signup";
-
+import Login from "../pages/customer/CustLogin";
+import Signup from "../pages/customer/CustSignup";
+import VendorLogin from "../pages/vendor/VendorLogin";
+import VendorSignup from "../pages/vendor/VendorSignup";
+import Cart from "../pages/customer/Cart";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -19,19 +21,23 @@ export const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "/customer",
+    path: "/customer/home",
     element: <CustomerHome />,
   },
   {
     path: "/vendor/login",
-    element: <Login />,
+    element: <VendorLogin />,
   },
   {
     path: "/vendor/signup",
-    element: <Signup />,
+    element: <VendorSignup />,
   },
   {
-    path: "/vendor",  
+    path: "/vendor/home",
     element: <VendorHome />,
+  },
+  {
+    path: "/customer/cart",
+    element: <Cart />,
   },
 ]);
