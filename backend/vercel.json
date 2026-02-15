@@ -1,19 +1,15 @@
 {
-  "version": 2,  // Specifies the Vercel configuration version.
+  "version": 2,
   "builds": [
     {
-      "src": "server.js", // Defines the entry point for the backend.
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/routes/(.*)", // Routes requests that start with '/routes' to index.js.
-      "dest": "server.js"
-    },
-    {
-      "src": "/(.*)", // Routes all other requests to index.js.
-      "dest": "server.js"
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
 }
