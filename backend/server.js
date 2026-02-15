@@ -60,6 +60,11 @@ const authMiddleware = (roles = []) => {
   };
 };
 
+app.get('/', async (req, res) => {
+  res.json({ message: "Welcome to the Striver backend API" });
+});
+
+
 
 /* ================= SIGNUP ================= */
 
@@ -242,4 +247,4 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK' });
 });
 
-module.exports = app;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
